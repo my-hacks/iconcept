@@ -1,1 +1,1 @@
-# iConcept
+# iConcept (Iguatemi Hackathon Project)

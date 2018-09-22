@@ -43,8 +43,7 @@ const routes: Routes = [
             },
             {
                 path: 'event',
-                loadChildren:
-                './event/event.module#EventModule'
+                loadChildren: './event/event.module#EventModule'
             }
         ]
     }
