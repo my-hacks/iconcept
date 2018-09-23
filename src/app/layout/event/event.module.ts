@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
 import { EventRoutesModule } from './event.routing.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -9,6 +10,8 @@ import { MatIconModule, MatButtonModule, MatFormField, MatFormFieldModule, MatSe
 import { EventDialogComponent } from './event-dialog/event-dialog.component';
 import { EventFormComponent } from './event-form/event-form.component';
 import { MatDialogModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     imports: [
@@ -29,7 +32,10 @@ import { MatDialogModule } from '@angular/material';
         MatSelectModule,
         MatOptionModule,
         MatFormFieldModule,
-        MatInputModule
+        MatInputModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule
     ],
     declarations: [
         EventComponent,
@@ -40,4 +46,4 @@ import { MatDialogModule } from '@angular/material';
         EventFormComponent
     ]
 })
-export class EventModule {}
+export class EventModule { }

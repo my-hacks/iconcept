@@ -17,6 +17,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
     // for development
@@ -37,6 +39,8 @@ export const createTranslateLoader = (http: HttpClient) => {
         LayoutModule,
         OverlayModule,
         HttpClientModule,
+        ReactiveFormsModule,
+        FormsModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

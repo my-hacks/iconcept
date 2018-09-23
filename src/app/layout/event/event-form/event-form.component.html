@@ -1,22 +1,39 @@
 <h2>Cadastrar Novo Evento</h2>
 
 <div class="example-container">
-  <mat-form-field>
-    <input matInput placeholder="Nome do Evento">
-  </mat-form-field>
 
-  <mat-form-field>
-    <textarea matInput placeholder="Textarea"></textarea>
-  </mat-form-field>
+  <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
 
-  <mat-form-field>
-      <mat-select placeholder="Favorite food">
-        <mat-option *ngFor="let food of foods" [value]="food.value">
-          {{food.viewValue}}
-        </mat-option>
-      </mat-select>
-  </mat-form-field>
+    <label>
+      First Name:
+      <input type="text" formControlName="eventName">
+    </label>
+
+    <label>
+      First Name:
+      <input type="text" formControlName="branding">
+    </label>
+
+    <label>
+      First Name:
+      <input type="text" formControlName="date">
+    </label>
+
+    <label>
+      First Name:
+      <input type="text" formControlName="description">
+    </label>
+
+    <label for="">
+      First Name:
+      <input type="file" formControlName="file">
+    </label>
+
+    <button type="submit">Enviar</button>
+
+  </form>
 
   
+
 
 </div>

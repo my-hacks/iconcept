@@ -10,18 +10,14 @@ import { EventFormComponent } from '../event-form/event-form.component';
 })
 export class EventDialogComponent implements OnInit {
 
-  const data = {}
-
   constructor(public dialog: MatDialog) {}
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EventFormComponent, {
       width: '250px',
-      data: this.data
+      data: { }
     });
   }
 }
