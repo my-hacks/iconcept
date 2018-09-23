@@ -59,11 +59,9 @@ export class EventComponent implements OnInit {
         });
         dialogRef.afterClosed().subscribe(result => {
             const data = {
-                imgSrc: 'assets/images/louis.jpg',
-                place: 'Birthday Sephora ',
-                description:
-                    'Come with us to celebrate 20 years of Success at Sephora and earn more points for Lounge One',
-                charge: '$199/night',
+                imgSrc: 'assets/images/rolex.jpg',
+                place: 'Rolex Exclusive Meeting',
+                description:'for users who have loved the brand for years, do not miss the next meeting of the most engaging leaders in the world and Rolex fans',
                 location: 'Sao Paulo, Brazil'
             };
             this.places.push(data);
