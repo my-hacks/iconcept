@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material';
 import { MatDialogRef } from '@angular/material';
 import { Inject } from '@angular/core';
@@ -23,6 +23,7 @@ export class EventFormComponent implements OnInit {
   eventForm: FormGroup;
   selectedFile: File = null;
   public _fileUrl = 'http://35.231.222.247:1880/eventos';
+  eventCreated = new EventEmitter();
 
   ngOnInit() {
     this.buildForm();
@@ -73,7 +74,7 @@ export class EventFormComponent implements OnInit {
     this.eventService.addEvent(this.eventForm.value).subscribe(() => {
       console.log('dados enviados com sucesso');
     });
-
+    this.dialogRef.close();
   }
 
 }

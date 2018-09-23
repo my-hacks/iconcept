@@ -1,6 +1,8 @@
 import { MatDialog } from '@angular/material';
 import { Component, OnInit } from '@angular/core';
 import { EventFormComponent } from './event-form/event-form.component';
+import { MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialogRef } from '@angular/material';
 
 @Component({
     selector: 'app-event',
@@ -51,11 +53,21 @@ export class EventComponent implements OnInit {
             width: '250px',
             data: {}
         });
-
         dialogRef.afterClosed().subscribe(result => {
-            console.log('The dialog was closed');
+            const data = {
+                imgSrc: 'assets/images/louis.jpg',
+                place: 'Birthday Sephora ',
+                description:
+                    'Come with us to celebrate 20 years of Success at Sephora and earn more points for Lounge One',
+                charge: '$199/night',
+                location: 'Sao Paulo, Brazil'
+            };
+            this.places.push(data);
         });
+    }
 
+    receiveEvent(createdEvent) {
+        console.log('evento criado', createdEvent);
     }
 
 
