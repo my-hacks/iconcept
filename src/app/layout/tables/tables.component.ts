@@ -1,3 +1,4 @@
+import { EventService } from './../event/event-service/event.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 
@@ -9,11 +10,12 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 export class TablesComponent implements OnInit {
     displayedColumns = ['id', 'name', 'progress', 'color'];
     dataSource: MatTableDataSource<UserData>;
+    clientData: any;
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
     @ViewChild(MatSort) sort: MatSort;
 
-    constructor() {
+    constructor(private eventService: EventService) {
         // Create 100 users
         const users: UserData[] = [];
         for (let i = 1; i <= 100; i++) {
@@ -27,6 +29,9 @@ export class TablesComponent implements OnInit {
     ngOnInit() {
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        this.eventService.getClients().subscribe(data => {
+            console.log('retorno clientes', data);
+        });
     }
 
     applyFilter(filterValue: string) {
@@ -41,21 +46,21 @@ export class TablesComponent implements OnInit {
 
 /** Constants used to fill up our data base. */
 const COLORS = [
-    'maroon',
-    'red',
-    'orange',
-    'yellow',
-    'olive',
-    'green',
-    'purple',
-    'fuchsia',
-    'lime',
-    'teal',
-    'aqua',
-    'blue',
-    'navy',
-    'black',
-    'gray'
+    // 'maroon',
+    // 'red',
+    // 'orange',
+    // 'yellow',
+    // 'olive',
+    // 'green',
+    // 'purple',
+    // 'fuchsia',
+    // 'lime',
+    // 'teal',
+    // 'aqua',
+    // 'blue',
+    // 'navy',
+    // 'black',
+    // 'gray'
 ];
 const NAMES = [
     'Maia',
@@ -97,7 +102,7 @@ function createNewUser(id: number): UserData {
     return {
         id: id.toString(),
         name: name,
-        progress: Math.round(Math.random() * 100).toString(),
+        progress: Math.round(Math.random() * 100000).toString(),
         color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
     };
 }

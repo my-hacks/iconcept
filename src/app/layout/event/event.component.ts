@@ -50,7 +50,8 @@ export class EventComponent implements OnInit {
 
     openDialog(): void {
         const dialogRef = this.dialog.open(EventFormComponent, {
-            width: '250px',
+            width: '400px',
+            height: '400px'
             data: {}
         });
         dialogRef.afterClosed().subscribe(result => {

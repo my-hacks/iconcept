@@ -3,38 +3,29 @@
 <div class="example-container">
 
   <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="First Name" formControlName="eventName">
+    </mat-form-field>
 
-    <label>
-      First Name:
-      <input type="text" formControlName="eventName">
-    </label>
+    <mat-form-field>
+      <input matInput placeholder="Branding" formControlName="branding">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Date" formControlName="date">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Description" formControlName="description">
+    </mat-form-field>
 
-    <label>
-      First Name:
-      <input type="text" formControlName="branding">
-    </label>
-
-    <label>
-      First Name:
-      <input type="text" formControlName="date">
-    </label>
-
-    <label>
-      First Name:
-      <input type="text" formControlName="description">
-    </label>
-
-    <label for="">
-      First Name:
-      <input type="file" formControlName="file" (change)="onFileSelected($event)">
-      <button (click)="onUpload()"></button>
-    </label>
-
-    <button type="submit">Enviar</button>
+      <input type="file" placeholder="Enviar Arquivo" formControlName="file" (change)="onFileSelected($event)">
+      <!-- <button (click)="onUpload()"> Upload</button>   -->
+    
+    <br>  
+    <button mat-raised-button color="primary" type="submit" class="btnSalvar">Salvar</button>
 
   </form>
 
-  
+
 
 
 </div>

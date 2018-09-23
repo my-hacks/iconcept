@@ -1,28 +1,29 @@
 import { Injectable } from '@angular/core';
-import { HttpParams, HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
-import { FileUploader } from 'ng2-file-upload';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { T } from '@angular/core/src/render3';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventService {
 
-  public _url = 'http://35.231.222.247:1880/notificacao';  
+  public _url = 'http://35.231.222.247:1880/notificacao';
+  public _clientsUrl = 'http://api.hack.platformbuilders.io/iguatemi/v1/clientes';
 
   constructor(private _http: HttpClient) { }
 
   addEvent(data: any) {
     console.log('data', data);
     localStorage.setItem('event', JSON.stringify(data));
-    return this._http.post(this._url,  data);
+    return this._http.post(this._url, data);
   }
 
-  // uploadFile(file: any) {
-  //   const headers = new HttpHeaders();
-  //   headers.append('Content-Type', 'multipart/form-data');
-  //   this._http.post(this._fileUrl, file, {headers: undefined});
-  // }
+  getClients(): Observable<any> {
+    const requestOptions = {
+      params: new HttpParams()
+    };
+    requestOptions.params.set('api-key', 'ef0ea7e8b7bd4087a6ab4d76f0d37b06');
+    return this._http.get(this._clientsUrl, requestOptions);
+  }
 
 }

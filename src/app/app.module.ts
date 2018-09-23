@@ -16,7 +16,6 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-// import { FileSelectDirective } from 'ng2-file-upload';
 
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {

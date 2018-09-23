@@ -32,10 +32,10 @@ import { HttpClientModule } from '@angular/common/http';
         MatSelectModule,
         MatOptionModule,
         MatFormFieldModule,
-        MatInputModule,
         FormsModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+        MatInputModule
     ],
     declarations: [
         EventComponent,
