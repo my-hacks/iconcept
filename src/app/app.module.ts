@@ -13,11 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/compiler/src/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+// import { FileSelectDirective } from 'ng2-file-upload';
 
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
@@ -41,6 +40,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         HttpClientModule,
         ReactiveFormsModule,
         FormsModule,
+        // FileSelectDirective,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
