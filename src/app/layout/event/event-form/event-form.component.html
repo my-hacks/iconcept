@@ -4,14 +4,14 @@
 
   <form [formGroup]="eventForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
-      <input matInput placeholder="First Name" formControlName="eventName">
+      <input matInput placeholder="Event Name" formControlName="eventName">
     </mat-form-field>
 
     <mat-form-field>
       <input matInput placeholder="Branding" formControlName="branding">
     </mat-form-field>
     <mat-form-field>
-      <input matInput placeholder="Date" formControlName="date">
+      <input matInput placeholder="Date"  type="date" formControlName="date">
     </mat-form-field>
     <mat-form-field>
       <input matInput placeholder="Description" formControlName="description">

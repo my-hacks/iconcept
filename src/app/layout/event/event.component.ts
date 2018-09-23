@@ -32,16 +32,14 @@ export class EventComponent implements OnInit {
             {
                 imgSrc: 'assets/images/dolce2.jpg',
                 place: 'Dolce and Gabanna Exclusive Party',
-                description:
-                    'From mans with styles and tendencies of fashion trending.',
+                description: 'From mans with styles and tendencies of fashion trending.',
                 charge: '$850/night',
                 location: 'Sao Paulo, Brazil'
             },
             {
                 imgSrc: 'assets/images/louis.jpg',
                 place: 'Birthday Sephora ',
-                description:
-                    'Come with us to celebrate 20 years of Success at Sephora and earn more points for Lounge One',
+                description: 'Come with us to celebrate 20 years of Success at Sephora and earn more points for Lounge One',
                 charge: '$199/night',
                 location: 'Sao Paulo, Brazil'
             }
@@ -51,7 +49,7 @@ export class EventComponent implements OnInit {
     openDialog(): void {
         const dialogRef = this.dialog.open(EventFormComponent, {
             width: '400px',
-            height: '400px'
+            height: '400px',
             data: {}
         });
         dialogRef.afterClosed().subscribe(result => {

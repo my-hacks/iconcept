@@ -1,17 +1,19 @@
 <div class="mb-20" fxLayout="row" fxLayout.lt-md="column" fxFlex fxLayoutGap="20px">
     <div fxFlex>
-        <app-stat [bgClass]="'danger'" [icon]="'dashboard'" [count]="13" [label]="'New Tickets!'"></app-stat>
+        <app-stat [bgClass]="'danger'" [icon]="'dashboard'" [count]="1267" [label]="'Clientes Exclusivos'"></app-stat>
     </div>
     <div fxFlex>
-        <app-stat [bgClass]="'warn'" [icon]="'view_list'" [count]="12" [label]="'New task!'"></app-stat>
+        <app-stat [bgClass]="'warn'" [icon]="'view_list'" [count]="23467" [label]="'Vendas'"></app-stat>
     </div>
     <div fxFlex>
-        <app-stat [bgClass]="'success'" [icon]="'shopping_cart'" [count]="124" [label]="'New Orders!'"></app-stat>
+        <app-stat [bgClass]="'success'" [icon]="'shopping_cart'" [count]="1035000" [label]="'Valor Acumulado'"></app-stat>
     </div>
     <div fxFlex>
-        <app-stat [bgClass]="'info'" [icon]="'contact_support'" [count]="13" [label]="'New Tickets!'"></app-stat>
+        <app-stat [bgClass]="'info'" [icon]="'contact_support'" [count]="2917.00" [label]="'Ticket Médio'"></app-stat>
     </div>
 </div>
+
+<h3>Produtos mais bem avaliados</h3>
 
 <div class="mb-20" flFlex flexLayout="row" flexLayout.lt-md="column">
     <div fxFlex>
@@ -38,7 +40,9 @@
     </div>
 </div>
 
+<h3>Ultimos Eventos Realizados </h3> <br>
 <div class="mb-20" fxLayout="row" fxLayout.lt-md="column" fxFlex fxLayoutGap="20px">
+    
     <div fxFlex *ngFor="let item of places">
         <mat-card>
             <img mat-card-image [src]="item.imgSrc">

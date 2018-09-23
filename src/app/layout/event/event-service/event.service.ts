@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,6 +9,9 @@ export class EventService {
 
   public _url = 'http://35.231.222.247:1880/notificacao';
   public _clientsUrl = 'http://api.hack.platformbuilders.io/iguatemi/v1/clientes';
+  public requestOptions = {
+    params: new HttpParams()
+  };
 
   constructor(private _http: HttpClient) { }
 
@@ -19,11 +22,10 @@ export class EventService {
   }
 
   getClients(): Observable<any> {
-    const requestOptions = {
-      params: new HttpParams()
-    };
-    requestOptions.params.set('api-key', 'ef0ea7e8b7bd4087a6ab4d76f0d37b06');
-    return this._http.get(this._clientsUrl, requestOptions);
+   const headers = new HttpHeaders({
+    'api-key': 'ef0ea7e8b7bd4087a6ab4d76f0d37b06'
+   });
+    return this._http.get(this._clientsUrl,  { headers: headers} );
   }
 
 }

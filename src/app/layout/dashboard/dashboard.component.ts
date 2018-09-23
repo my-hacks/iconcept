@@ -2,66 +2,67 @@ import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 
 export interface PeriodicElement {
-    name: string;
-    position: number;
-    weight: number;
-    symbol: string;
+	name: string;
+	position: number;
+	weight: number;
+	symbol: string;
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-    { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-    { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-    { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-    { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-    { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-    { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-    { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' }
+const ELEMENT_DATA: any[] = [
+	{ position: 1, name: 'Bolsa Cavalera', weight: 'R$ ' + '5325', symbol: 'E Lounge' },
+	{ position: 2, name: 'Rolex', weight: 'R$ ' + '8930', symbol: 'E Lounge' },
+	{ position: 3, name: 'Bolsa de Couro Carmim', weight: 'R$ ' + '2340', symbol: 'Normal' },
+	{ position: 4, name: 'Bolsa Rauph Lauren', weight: 'R$ ' + '7320', symbol: 'Normal' },
+	{ position: 5, name: 'Jaqueta Prada Ouro', weight: 'R$ ' + '9916', symbol: 'E Lounge' },
+	{ position: 6, name: 'Scarpin Prada', weight: 'R$ ' + '1650', symbol: 'E Lounge' },
+	{ position: 7, name: 'Blusa de Couro Carmim', weight: 'R$ ' + '1890', symbol: 'Normal' },
+	{ position: 5, name: 'Scarpin Louboutin', weight: 'R$ ' + '7000', symbol: 'E Lounge' },
+	{ position: 6, name: 'Scarpin Valentina', weight: 'R$ ' + '4500', symbol: 'Normal' },
+	{ position: 7, name: 'Blusa de Couro Carmim', weight: 'R$ ' + '1890', symbol: 'Normal' }
 ];
 
 @Component({
-    selector: 'app-dashboard',
-    templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.scss']
+	selector: 'app-dashboard',
+	templateUrl: './dashboard.component.html',
+	styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-    displayedColumns = ['position', 'name', 'weight', 'symbol'];
-    dataSource = new MatTableDataSource(ELEMENT_DATA);
-    places: Array<any> = [];
+	displayedColumns = ['position', 'name', 'weight', 'symbol'];
+	dataSource = new MatTableDataSource(ELEMENT_DATA);
+	places: Array<any> = [];
 
-    applyFilter(filterValue: string) {
-        filterValue = filterValue.trim(); // Remove whitespace
-        filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
-        this.dataSource.filter = filterValue;
-    }
+	applyFilter(filterValue: string) {
+		filterValue = filterValue.trim(); // Remove whitespace
+		filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
+		this.dataSource.filter = filterValue;
+	}
 
-    constructor() {
-        this.places = [
-            {
-                imgSrc: 'assets/images/card-1.jpg',
-                place: 'Cozy 5 Stars Apartment',
-                description:
-                    'The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Barcelona.',
-                charge: '$899/night',
-                location: 'Barcelona, Spain'
-            },
-            {
-                imgSrc: 'assets/images/card-2.jpg',
-                place: 'Office Studio',
-                description:
-                    'The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the night life in London, UK.',
-                charge: '$1,119/night',
-                location: 'London, UK'
-            },
-            {
-                imgSrc: 'assets/images/card-3.jpg',
-                place: 'Beautiful Castle',
-                description:
-                    'The place is close to Metro Station and bus stop just 2 min by walk and near to "Naviglio" where you can enjoy the main night life in Milan.',
-                charge: '$459/night',
-                location: 'Milan, Italy'
-            }
-        ];
-    }
+	constructor() {
+		this.places = [
+			{
+				imgSrc: 'assets/images/boss.JPG',
+				place: 'Hugo Boss Exclusive',
+				description: 'Launch of the Hugo Bosso New Collection for Lounge One customers only.',
+				charge: '350 Convidados',
+				location: 'Sao Paulo, Brazil'
+			},
+			{
+				imgSrc: 'assets/images/nike.jpg',
+				place: 'Nike Air Special Event',
+				description: 'Launch of the new Air collection for the public that follows the trends of the brand',
+				charge: '1050 convidados',
+				location: 'Sao Carlos, Brazil'
+			},
+			{
+				imgSrc: 'assets/images/desfile.jpeg',
+				place: 'Hugo Boss Parade',
+				// tslint:disable-next-line:max-line-length
+				description: 'Direct from London the brand has brought the models that will be trend, only for Client Lounge, for demanding customers and who like to be wearing great clothes',
+				charge: '400 convidados',
+				location: 'Milan, Italy'
+			}
+		];
+	}
 
-    ngOnInit() {}
+	ngOnInit() { }
 }

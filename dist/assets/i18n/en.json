@@ -1,8 +1,9 @@
 {
-    "Dashboard": "Dashboard",
-    "Charts": "Charts",
-    "Tables": "Tables",
-    "Forms": "Forms",
+    "Dashboard": "Home",
+    "Charts": "Analitcs",
+    "Tables": "Tabela de Dados",
+    "Forms": "Calendario",
+    "Events": "Eventos",
     "Material Grid": "Material Grid",
     "Material Component": "Material Component",
     "Menu": "Menu",

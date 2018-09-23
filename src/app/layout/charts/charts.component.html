@@ -2,7 +2,7 @@
     <div fxFlex>
         <mat-card>
             <mat-card-header>
-                <mat-card-title>Bar Chart</mat-card-title>
+                <mat-card-title>Histórico de Vendas</mat-card-title>
             </mat-card-header>
             <mat-card-content>
                 <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend"
@@ -13,7 +13,7 @@
     <div fxFlex>
         <mat-card>
             <mat-card-header>
-                <mat-card-title>Doughnut Chart</mat-card-title>
+                <mat-card-title>Vendas Segmentadas</mat-card-title>
             </mat-card-header>
             <mat-card-content>
                 <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [chartType]="doughnutChartType" (chartHover)="chartHovered($event)"
@@ -26,7 +26,7 @@
     <div fxFlex>
         <mat-card>
             <mat-card-header>
-                <mat-card-title>Radar Chart</mat-card-title>
+                <mat-card-title>Busca Por Novos Produtos</mat-card-title>
             </mat-card-header>
             <mat-card-content>
                 <canvas baseChart width="500" height="200" [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType"
@@ -37,7 +37,7 @@
     <div fxFlex>
         <mat-card>
             <mat-card-header>
-                <mat-card-title>Pie Chart</mat-card-title>
+                <mat-card-title>Relação Custo Venda</mat-card-title>
             </mat-card-header>
             <mat-card-content>
                 <canvas baseChart width="500" height="200" [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)"
@@ -46,7 +46,7 @@
         </mat-card>
     </div>
 </div>
-<div class="mb-20" fxLayout="row" fxLayout.lt-md="column" fxFlex fxLayoutGap="20px">
+<!-- <div class="mb-20" fxLayout="row" fxLayout.lt-md="column" fxFlex fxLayoutGap="20px">
     <div fxFlex>
         <mat-card>
             <mat-card-header>
@@ -70,4 +70,4 @@
             </mat-card-content>
         </mat-card>
     </div>
-</div>
+</div> -->

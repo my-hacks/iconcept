@@ -16,45 +16,43 @@ export class ChartsComponent implements OnInit {
     public barChartLegend: boolean = true;
 
     public barChartData: any[] = [
-        { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-        { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+        { data: [65, 59, 80, 81, 56, 55, 40], label: 'Lounge One' },
+        { data: [28, 48, 40, 19, 86, 27, 90], label: 'Classe B' }
     ];
 
     // Doughnut
-    public doughnutChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail-Order Sales'];
+    public doughnutChartLabels: string[] = ['Lançamentos', 'Estoque Acumulado', 'Vendas Exclusivas'];
     public doughnutChartData: number[] = [350, 450, 100];
     public doughnutChartType: string = 'doughnut';
 
     // Radar
     public radarChartLabels: string[] = [
-        'Eating',
-        'Drinking',
-        'Sleeping',
-        'Designing',
-        'Coding',
-        'Cycling',
-        'Running'
+        'Novos Clientes',
+        'Lounge One',
+        'Classe B',
+        'Clientes Exclusivos',
+        'Diversos'
+        // '',
+        // 'Running'
     ];
     public radarChartData: any = [
-        { data: [65, 59, 90, 81, 56, 55, 40], label: 'Series A' },
-        { data: [28, 48, 40, 19, 96, 27, 100], label: 'Series B' }
+        { data: [65, 59, 90, 81, 56, 55, 40], label: 'Vendas Exclusivas' },
+        { data: [28, 48, 40, 19, 96, 27, 100], label: 'Vendas de Vitrine' }
     ];
     public radarChartType: string = 'radar';
 
     // Pie
-    public pieChartLabels: string[] = ['Download Sales', 'In-Store Sales', 'Mail Sales'];
-    public pieChartData: number[] = [300, 500, 100];
+    public pieChartLabels: string[] = ['Pedidos Exclusivos', 'Faturamento IConcept', 'Segmentados'];
+    public pieChartData: number[] = [300, 1345, 100];
     public pieChartType: string = 'pie';
 
     // PolarArea
     public polarAreaChartLabels: string[] = [
-        'Download Sales',
-        'In-Store Sales',
-        'Mail Sales',
-        'Telesales',
-        'Corporate Sales'
+        'Pedidos Exclusivos',
+        'Faturamento Acumulado',
+        'Segmentados'
     ];
-    public polarAreaChartData: number[] = [300, 500, 100, 40, 120];
+    public polarAreaChartData: number[] = [300, 1345, 100, 40, 120];
     public polarAreaLegend: boolean = true;
 
     public polarAreaChartType: string = 'polarArea';
