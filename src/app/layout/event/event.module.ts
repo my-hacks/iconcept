@@ -6,7 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { EventComponent } from './event.component';
-import { MatIconModule, MatButtonModule, MatFormField, MatFormFieldModule, MatSelectModule, MatOptionModule, MatInputModule } from '@angular/material';
+import { MatIconModule, MatButtonModule, MatFormField, MatFormFieldModule, MatSelectModule, MatOptionModule, MatInputModule, MatCheckboxModule } from '@angular/material';
 import { EventDialogComponent } from './event-dialog/event-dialog.component';
 import { EventFormComponent } from './event-form/event-form.component';
 import { MatDialogModule } from '@angular/material';
@@ -35,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        MatInputModule
+        MatInputModule,
+        MatCheckboxModule
     ],
     declarations: [
         EventComponent,

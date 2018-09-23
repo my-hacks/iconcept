@@ -23,6 +23,15 @@
                     <mat-icon class="nav-icon">location_on</mat-icon> {{item.location}}
                 </button>
             </mat-card-actions>
+
+            <mat-checkbox 
+                class="example-margin" 
+                [(indeterminate)]="indeterminate"
+                [labelPosition]="labelPosition" 
+                [disabled]="disabled">
+                Habilitar iConcept
+            </mat-checkbox>
+
         </mat-card>
     </div>
 </div>

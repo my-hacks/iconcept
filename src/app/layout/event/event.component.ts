@@ -11,6 +11,11 @@ import { MatDialogRef } from '@angular/material';
 })
 export class EventComponent implements OnInit {
 
+    checked = false;
+    indeterminate = false;
+    labelPosition = 'after';
+    disabled = false;
+
     ngOnInit() {
         console.log('carregado');
     }
@@ -26,21 +31,21 @@ export class EventComponent implements OnInit {
                 place: 'Prada Exclusive Party',
                 description:
                     'New Prada Collection of Bags and Dresses Launch Event',
-                charge: '$399/night',
+                charge: '350 convidados',
                 location: 'Sao Paulo, Brazil'
             },
             {
                 imgSrc: 'assets/images/dolce2.jpg',
-                place: 'Dolce and Gabanna Exclusive Party',
+                place: 'Dolce Gabanna Exclusive Party',
                 description: 'From mans with styles and tendencies of fashion trending.',
-                charge: '$850/night',
+                charge: '600 convidados',
                 location: 'Sao Paulo, Brazil'
             },
             {
                 imgSrc: 'assets/images/louis.jpg',
                 place: 'Birthday Sephora ',
                 description: 'Come with us to celebrate 20 years of Success at Sephora and earn more points for Lounge One',
-                charge: '$199/night',
+                charge: '320 convidados',
                 location: 'Sao Paulo, Brazil'
             }
         ];
